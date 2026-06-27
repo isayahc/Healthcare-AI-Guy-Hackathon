@@ -1,0 +1,40 @@
+# Core LLM + agent framework
+langchain==0.3.25
+langchain-openai==0.3.16
+langchain-chroma>=0.2.4
+langchain-community==0.3.23
+langgraph==0.4.8
+
+# Document loading and splitting
+pypdf==5.4.0
+tiktoken==0.9.0
+
+# Vector store
+chromadb>=1.0.9
+
+# API server (local + Baseten)
+fastapi==0.115.12
+uvicorn==0.34.2
+python-multipart==0.0.20   # for file uploads (images/video)
+
+# Voice: speech-to-text
+# Note: install separately if this fails: pip install openai-whisper
+# or via conda: conda install -c conda-forge openai-whisper
+openai-whisper   # local Whisper STT (no version pin — avoids setuptools conflicts)
+
+# Voice: text-to-speech
+elevenlabs==2.3.0
+
+# Audio recording (for local mic input)
+# Mac: run `brew install portaudio` first, then `pip install pyaudio`
+# Or use conda: `conda install -c conda-forge pyaudio`
+pyaudio
+
+# Image handling
+Pillow==11.2.1
+
+# Environment variables
+python-dotenv==1.1.0
+
+# HTTP client (for Lovable → backend calls)
+httpx==0.28.1
